@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>개발자 꿈나무의 컴퓨터 장만 프로젝트</title>
+  <style>
+    :root {
+      --bg-color: #0d1117;
+      --card-bg: #161b22;
+      --border-color: #30363d;
+      --text-main: #c9d1d9;
+      --text-sub: #8b949e;
+      --accent: #2ea043;
+      --accent-hover: #3fb950;
+      --blue: #58a6ff;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      margin-bottom: 24px;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(88, 166, 255, 0.15);
+      color: var(--blue);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: 26px;
+      color: #ffffff;
+    }
+    .subtitle {
+      color: var(--text-sub);
+      font-size: 15px;
+      margin-bottom: 24px;
+    }
+    .goal-box {
+      background: #0d1117;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 20px;
+      text-align: left;
+    }
+    .goal-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    .progress-bar {
+      background: #21262d;
+      height: 14px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 12px;
+    }
+    .progress-fill {
+      background: var(--accent);
+      height: 100%;
+      width: 15%; /* 현재 달성률 수정 가능 */
+      transition: width 0.4s ease;
+    }
+    .support-btn {
+      display: block;
+      width: 100%;
+      background: var(--accent);
+      color: #ffffff;
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      padding: 14px 0;
+      border-radius: 8px;
+      margin-top: 16px;
+      transition: background 0.2s;
+    }
+    .support-btn:hover {
+      background: var(--accent-hover);
+    }
+    section {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    h2 {
+      font-size: 18px;
+      color: #ffffff;
+      margin-top: 0;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 10px;
+    }
+    .spec-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .spec-list li {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px dashed var(--border-color);
+      font-size: 14px;
+    }
+    .spec-list li:last-child {
+      border-bottom: none;
+    }
+    .log-item {
+      margin-bottom: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .log-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .log-date {
+      font-size: 12px;
+      color: var(--blue);
+      font-weight: bold;
+    }
+    .log-title {
+      font-size: 16px;
+      font-weight: bold;
+      color: #ffffff;
+      margin: 4px 0;
+    }
+    .log-desc {
+      font-size: 14px;
+      color: var(--text-sub);
+      margin: 0;
+    }
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-sub);
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- 상단 프로필 및 모금 현황 -->
+  <header>
+    <span class="badge">💻 청소년 개발자 성장 프로젝트</span>
+    <h1>더 나은 코딩 환경을 위한 컴퓨터 장만기</h1>
+    <p class="subtitle">
+      안녕하세요! 매일 조금씩 코드를 짜며 개발자를 꿈꾸는 학생입니다.<br>
+      지금 쓰는 구형 PC로는 개발 툴을 돌리기가 벅차, 새 코딩용 컴퓨터를 맞추기 위해 작은 후원을 모으고 있습니다.
+    </p>
+
+    <div class="goal-box">
+      <div class="goal-header">
+        <span>현재 모금액: <strong>135,000원</strong> (15%)</span>
+        <span>목표 금액: <strong>900,000원</strong></span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 15%;"></div>
+      </div>
+      <div style="font-size: 12px; color: var(--text-sub);">
+        * 후원해 주신 금액은 전액 코딩용 데스크탑 부품 구매에만 사용되며, 구매 영수증을 투명하게 공개합니다.
+      </div>
+      <!-- 아래 href="#" 부분에 본인의 포스타입 또는 투네이션 후원 주소를 넣으세요 -->
+      <a href="https://postype.com" target="_blank" class="support-btn">
+        ☕ 커피 한 잔 값으로 코딩 응원하기 (안전 후원 링크)
+      </a>
+    </div>
+  </header>
+
+  <!-- 목표 컴퓨터 견적 투명 공개 -->
+  <section>
+    <h2>🖥️ 목표 코딩용 PC 견적 (총 90만 원)</h2>
+    <ul class="spec-list">
+      <li><span>CPU (멀티태스킹 및 빌드 속도 향상)</span> <strong>약 250,000원</strong></li>
+      <li><span>RAM 32GB (가상머신 및 IDE 동시 실행)</span> <strong>약 120,000원</strong></li>
+      <li><span>메인보드 & 파워서플라이</span> <strong>약 200,000원</strong></li>
+      <li><span>SSD 1TB (개발 환경 및 프로젝트 저장)</span> <strong>약 110,000원</strong></li>
+      <li><span>케이스 및 쿨러 (조립비 포함)</span> <strong>약 120,000원</strong></li>
+      <li><span>예비비 및 배송비</span> <strong>약 100,000원</strong></li>
+    </ul>
+  </section>
+
+  <!-- 코딩 공부 일기 (신뢰도 향상용) -->
+  <section>
+    <h2>📝 최근 코딩 공부 & 개발 기록</h2>
+    <div class="log-item">
+      <div class="log-date">2026.11.14</div>
+      <div class="log-title">개인 후원 및 포트폴리오 웹사이트 제작</div>
+      <p class="log-desc">HTML과 CSS를 활용해 제 코딩 목표와 공부 기록을 공유하는 첫 웹페이지를 직접 만들어 배포했습니다.</p>
+    </div>
+    <div class="log-item">
+      <div class="log-date">2026.11.10</div>
+      <div class="log-title">파이썬 기초 자동화 스크립트 연습</div>
+      <p class="log-desc">반복되는 파일 이름 정리 작업을 자동화하는 간단한 코드를 작성해 보았습니다. 컴파일 속도가 느려 새 PC가 간절해졌습니다.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>응원해 주신 모든 분께 감사드립니다. 컴퓨터를 장만하면 첫 번째로 만든 프로그램을 이곳에 공개하겠습니다!</p>
+  </footer>
+</div>
+
+</body>
+</html>
